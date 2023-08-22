@@ -8,7 +8,7 @@ import com.example.myapplication.utils.FirebaseUtils
 import com.example.myapplication.utils.StorageUtils
 
 
-class WebViewViewModel: ViewModel() {
+class WebViewViewModel : ViewModel() {
 
     private val url: MutableLiveData<String> = MutableLiveData()
     val mUrl: LiveData<String> = url
@@ -17,11 +17,11 @@ class WebViewViewModel: ViewModel() {
     fun updateUrlValueIfNeeded(ctx: Context) {
         if (url.value != null)
             return
-        val storedUrl = StorageUtils.getStoredUrl(ctx)
-        if (storedUrl.isNullOrEmpty()) {
-            FirebaseUtils.fetchRemoteConfig().addOnCompleteListener {
-                url.postValue(FirebaseUtils.getWebViewUrl())
-                StorageUtils.setStoredUrl(ctx, mUrl.value?:"") }
+        FirebaseUtils.fetchRemoteConfig().addOnCompleteListener {
+            val result = FirebaseUtils.getWebViewUrl()
+            url.postValue(result)
+            StorageUtils.setStoredUrl(ctx, result)
         }
+
     }
 }
