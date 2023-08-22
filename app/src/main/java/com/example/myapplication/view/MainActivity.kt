@@ -3,6 +3,7 @@ package com.example.myapplication.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 
 import com.example.myapplication.R
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity(), WebviewFragment.OnErrorCallback {
         viewModel.mUrl.observe(this) {
 
             if (it.isBlank()) {
+                Toast.makeText(
+                    this,
+                    "Internet error. Please checks internet connection and try again",
+                    Toast.LENGTH_SHORT
+                ).show()
                 loadDummy()
             } else loadWebViewFragment(it)
         }
