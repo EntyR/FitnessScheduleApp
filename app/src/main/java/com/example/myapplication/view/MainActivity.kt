@@ -12,6 +12,7 @@ import com.example.myapplication.utils.DeviseBrandUtils
 import com.example.myapplication.utils.NetworkUtils
 import com.example.myapplication.utils.StorageUtils
 import com.example.myapplication.view.fragments.NoInternedExplanationFragment
+import com.example.myapplication.view.fragments.TimerAndScheduleFragment
 import com.example.myapplication.view.fragments.WebviewFragment
 import com.example.myapplication.view.viewmodels.WebViewViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        loadDummy()
+        return
         val storedUrl = StorageUtils.getStoredUrl(this)
         if (!storedUrl.isNullOrEmpty()) {
             lifecycleScope.launch(Dispatchers.Default) {
@@ -74,5 +77,8 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.root, fragment).commit()
     }
 
-    private fun loadDummy() = Unit
+    private fun loadDummy() {
+        val fragment = TimerAndScheduleFragment.newInstance()
+        supportFragmentManager.beginTransaction().replace(R.id.root, fragment).commit()
+    }
 }
