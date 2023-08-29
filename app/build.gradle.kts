@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "health.fit.bodyz.app"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "health.fit.bodyz.app"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -50,6 +50,9 @@ dependencies {
     ksp ("androidx.room:room-compiler:2.5.2")
     implementation("androidx.room:room-common:2.5.2")
     implementation("androidx.room:room-ktx:2.5.2")
+
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+
 
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     testImplementation("junit:junit:4.13.2")

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "684462866270",
-    "project_id": "xfitnessapp",
-    "storage_bucket": "xfitnessapp.appspot.com"
+    "project_number": "1089482581230",
+    "project_id": "healthp-1f93f",
+    "storage_bucket": "healthp-1f93f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:684462866270:android:aa29ab733f6286d4fd19cf",
+        "mobilesdk_app_id": "1:1089482581230:android:7f9c290c015e07cf82bfff",
         "android_client_info": {
-          "package_name": "com.example.myapplication"
+          "package_name": "health.fit.bodyz.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "684462866270-thpjilnvfqkqt2g3qrhaccjc5bqi1fu8.apps.googleusercontent.com",
+          "client_id": "1089482581230-s8582vt189r01a46garb7gmicdn97hl8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDLLHpTZFRTAAga4bhAV9IG6RhZrF1Wpeg"
+          "current_key": "AIzaSyABJ34X7SLlhcE13DetR3aI_Fy7PrSRMBk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "684462866270-thpjilnvfqkqt2g3qrhaccjc5bqi1fu8.apps.googleusercontent.com",
+              "client_id": "1089482581230-s8582vt189r01a46garb7gmicdn97hl8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
