@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/stubBtnStartTimer" />
 
-    <com.example.myapplication.view.custom.TimerView
+    <health.fit.bodyz.app.view.custom.TimerView
         android:id="@+id/stubTimerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25">
 
-    </com.example.myapplication.view.custom.TimerView>
+    </health.fit.bodyz.app.view.custom.TimerView>
 
     <TextView
         android:id="@+id/stubTimerTime"
@@ -88,7 +88,7 @@
         app:layout_constraintStart_toStartOf="@+id/stubTimerView"
         app:layout_constraintTop_toTopOf="@+id/stubTimerView" />
 
-    <com.example.myapplication.view.custom.TimePicker
+    <health.fit.bodyz.app.view.custom.TimePicker
         android:id="@+id/stubTimePicker"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -102,7 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </com.example.myapplication.view.custom.TimePicker>
+    </health.fit.bodyz.app.view.custom.TimePicker>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
