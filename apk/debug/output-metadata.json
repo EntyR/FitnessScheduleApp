@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.myapplication",
+  "applicationId": "health.fit.bodyz.app",
   "variantName": "debug",
   "elements": [
     {
