@@ -1,5 +1,6 @@
 package health.fit.bodyz.app.view.fragments
 
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -52,6 +53,7 @@ class TimerAndScheduleFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.requestedOrientation = SCREEN_ORIENTATION_PORTRAIT
         return inflater.inflate(R.layout.fragment_timer_and_schedule, container, false)
     }
 
@@ -117,13 +119,13 @@ class TimerAndScheduleFragment : Fragment() {
                     closeTimer.visibility = View.VISIBLE
                 }
                 ScreenStatus.Paused -> {
-                    (startTimer as ImageButton).setImageResource(R.drawable.baseline_pause_24)
+                    startTimer.setImageResource(R.drawable.baseline_pause_24)
                     startTimerForTextView(countDownTimerCached)
                     timer.resumeValueAnimator()
                     status = ScreenStatus.Timers
                 }
                 ScreenStatus.Timers -> {
-                    (startTimer as ImageButton).setImageResource(R.drawable.baseline_play_arrow_24)
+                    startTimer.setImageResource(R.drawable.baseline_play_arrow_24)
                     countDownTimer.cancel()
                     status = ScreenStatus.Paused
                     timer.pauseValueAnimator()
@@ -154,7 +156,7 @@ class TimerAndScheduleFragment : Fragment() {
         status = ScreenStatus.PickTime
         countDownTimer.cancel()
         timer.stopTimer()
-        (startTimer as ImageButton).setImageResource(R.drawable.baseline_play_arrow_24)
+        startTimer.setImageResource(R.drawable.baseline_play_arrow_24)
         timePicker.visibility = View.VISIBLE
         timer.visibility = View.GONE
         timerTime.visibility = View.GONE

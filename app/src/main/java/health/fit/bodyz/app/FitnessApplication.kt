@@ -10,7 +10,6 @@ class FitnessApplication: Application() {
     private lateinit var db: WorkoutDb
     override fun onCreate() {
         super.onCreate()
-        FirebaseUtils.setLatencyForUpdate(3000)
         db= Room.databaseBuilder(this, WorkoutDb::class.java,
             health.fit.bodyz.app.DATABASE_NAME
         )
