@@ -55,12 +55,8 @@ class MainActivity : AppCompatActivity(), BackPressDelegation {
     private fun loadWebViewFromRemote() {
         viewModel.updateUrlValueIfNeeded(this@MainActivity)
         viewModel.mUrl.observe(this) {
-            if (it.isBlank()) {
-                Toast.makeText(
-                    this,
-                    "Internet error. Please try again later",
-                    Toast.LENGTH_SHORT
-                ).show()
+            if (it.isBlank() || it == "") {
+                loadDummy()
             } else {
                 loadWebViewFragment(it)
             }
